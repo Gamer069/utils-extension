@@ -1179,7 +1179,7 @@
             return txt.split(' ').length
         }
         empty({ txt }) {
-            return !!txt || txt === "";
+            return !txt.trim() || txt === "".trim();
         }
         async readFile() {
             return await new Promise((resolve, reject) => {
